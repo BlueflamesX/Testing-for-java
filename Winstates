@@ -1,0 +1,18 @@
+	
+if (board[0][0] == 'X' && board[0][1] == 'X' && board[0][2] == 'X')// Top hori
+	System.out.println("Player X has won.");
+else if (board[1][0] == 'X' && board[1][1] == 'X' && board[1][2] == 'X') // middle hori
+	System.out.println("Player X has won.");
+else if (board[2][0] == 'X' && board[2][1] == 'X' && board[2][2] == 'X')//bottom hori
+	System.out.println("Player X has won.");
+else if (board[0][0] == 'X' && board[1][0] == 'X' && board[2][0] == 'X')//left vert
+	System.out.println("Player X has won.");
+else if (board[0][1] == 'X' && board[1][1] == 'X' && board[2][1] == 'X')//mid vert
+	System.out.println("Player X has won.");
+else if (board[0][2] == 'X' && board[1][2] == 'X' && board[2][2] == 'X')//right vert
+	System.out.println("Player X has won.");
+else if (board[0][0] == 'X' && board[1][1] == 'X' && board[2][2] == 'X')//forwardslash
+	System.out.println("Player X has won.");
+else if (board[0][2] == 'X' && board[1][1] == 'X' && board[2][0] == 'X')//backslash
+	System.out.println("Player X has won.");
+
