@@ -16,3 +16,30 @@ else if (board[0][0] == 'X' && board[1][1] == 'X' && board[2][2] == 'X')//forwar
 else if (board[0][2] == 'X' && board[1][1] == 'X' && board[2][0] == 'X')//backslash
 	System.out.println("Player X has won.");
 
+Public class WinStates
+{
+ public static Boolean HorizontalWin(int row)
+	 {
+ 		if (board[row][0] == board[row][1] && board[row][2] == board[row][0])
+ 		return true;
+ 		return false;
+	 }
+ public static Boolean VertWin(int column)
+ 	{
+ 		if (board[0][column] == board[1][column] && board[2][column] == board[0][column])
+ 		return true;
+ 		return false;
+ 	}
+ public static Boolean ForeSlash()
+ 	{
+ 		if (board[0][0] == board[1][1]&& board[2][2] == board[0][0])
+ 		return true;
+ 		return false;
+ 	}
+public static Boolean BackSlash()
+	{
+		if (board[0][2] == board[1][1] && board[2][0] == board[2][0])
+		return true;
+		return false;
+	}
+}
