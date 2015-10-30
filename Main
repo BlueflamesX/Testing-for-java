@@ -1,11 +1,14 @@
 import java.io.*;
 import java.util.*;
-import javax.swing.*;
 
 Public class Main
 {
   public void static main(String[] args)
   {
+    Scanner Chungus = new Scanner(System.in);
+  	Gameboard board = new Gameboard();
+  	System.out.println("Welcome to Tic-Tac-Toe");
+  	display(board);
   	
   }
   
