@@ -18,28 +18,68 @@ else if (board[0][2] == 'X' && board[1][1] == 'X' && board[2][0] == 'X')//backsl
 
 Public class WinStates
 {
- public static Boolean HorizontalWin(int row)
+ public static Boolean HorizontalWin(int row,Gameboard board)
 	 {
  		if (board[row][0] == board[row][1] && board[row][2] == board[row][0])
  		return true;
  		return false;
 	 }
- public static Boolean VertWin(int column)
+ public static Boolean VertWin(int column,Gameboard board)
  	{
  		if (board[0][column] == board[1][column] && board[2][column] == board[0][column])
  		return true;
  		return false;
  	}
- public static Boolean ForeSlash()
+ public static Boolean ForeSlash(Gameboard board)
  	{
  		if (board[0][0] == board[1][1]&& board[2][2] == board[0][0])
  		return true;
  		return false;
  	}
-public static Boolean BackSlash()
+public static Boolean BackSlash(Gameboard board)
 	{
 		if (board[0][2] == board[1][1] && board[2][0] == board[2][0])
 		return true;
 		return false;
+	}
+public static char Winner(Gameboard board)
+	{
+	if(HorizontalWin(0,board))
+	return board[0][0];
+	if(HorizontalWin(1,board))
+	return board[1][0];
+	if(HorizontalWin(2,board))
+	return board[2][0];
+	if(VertWin(0,board))
+	return board[0][0];
+	if(VertWin(1,board))
+	return board[0][1];
+	if(VertWin(2,board))
+	return board[0][2];
+	if(ForeSlash())
+	return board[0][0];
+	if(BackSlash())
+	return board[0][2];
+	}
+public static Boolean CheckForWinner(Gameboard board)
+	{
+	if(HorizontalWin(0,board))
+	return true;
+	else if(HorizontalWin(1,board))
+	return true;
+	else if(HorizontalWin(2,board))
+	return true;
+	else if(VertWin(0,board))
+	return true;
+	else if(VertWin(1,board))
+	return true;
+	else if(VertWin(2,board))
+	return true;
+	else if(ForeSlash())
+	return true;
+	else if(BackSlash())
+	return true;
+	else
+	return false;
 	}
 }
