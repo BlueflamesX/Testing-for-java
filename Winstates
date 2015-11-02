@@ -42,7 +42,7 @@ public static Boolean BackSlash(Gameboard board)
 		return true;
 		return false;
 	}
-public static char Winner(Gameboard board)
+public char Winner()
 	{
 	if(HorizontalWin(0,board))
 	return board[0][0];
@@ -61,7 +61,7 @@ public static char Winner(Gameboard board)
 	if(BackSlash())
 	return board[0][2];
 	}
-public static Boolean CheckForWinner(Gameboard board)
+public Boolean CheckForWinner()
 	{
 	if(HorizontalWin(0,board))
 	return true;
