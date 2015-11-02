@@ -7,9 +7,24 @@ Public class Main
   {
     Scanner Chungus = new Scanner(System.in);
   	Gameboard board = new Gameboard();
+  	Boolean running = true, turn = false;
+  	int x, y;
+  	
   	System.out.println("Welcome to Tic-Tac-Toe");
   	display(board);
-  	
+  	while(running) {
+  	  if(!turn) {
+  	    Systen.out.println("It is Player 1's Turn");
+  	  }
+  	   if(turn) {
+  	    Systen.out.println("It is Player 2's Turn");
+  	  }
+  	  System.out.println("What is the X-coordinate of your move?");
+  	  x = Chungus.nextInt();
+  	  System.out.println("What is the Y-coordinate of your move?");
+  	  y = Chungus.nextInt();
+  	  
+  	}
   }
   
   public static void display(Gameboard board)
