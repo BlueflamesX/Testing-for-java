@@ -19,11 +19,23 @@ Public class Main
   	   if(turn) {
   	    Systen.out.println("It is Player 2's Turn");
   	  }
+  	  
   	  System.out.println("What is the X-coordinate of your move?");
   	  x = Chungus.nextInt();
   	  System.out.println("What is the Y-coordinate of your move?");
   	  y = Chungus.nextInt();
   	  
+  	  if(!turn) {
+  	    board.board[x][y] = 'X';
+  	    turn = true;
+  	  }
+  	   if(turn) {
+  	    board.board[x][y] = 'O';
+  	    turn = false;
+  	  }
+  	  
+  	  if(board.CheckForWinner())
+  	  running = false;
   	}
   }
   
