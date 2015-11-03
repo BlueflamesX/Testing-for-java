@@ -37,6 +37,7 @@ Public class Main
   	  if(board.CheckForWinner())
   	  running = false;
   	}
+  	System.out.println("Player "+board.Winner()+" is the Winner.")
   }
   
   public static void display(Gameboard board)
